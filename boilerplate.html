@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bookie!</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="mnml.css" />
+  <!--<link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">-->
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/vertical-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <h1>Bookie!</h1>
+    </section>
+
+    <section class="slide">
+      <h1>What is it?</h1>
+
+      <h2>Quick and (hopefully) easy conference room booking</h2>
+      <ul>
+        <li><h3>Started as a problem that needed solving</h3></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What's Bookie?</h1>
+
+      <h2>Quick and (hopefully) easy conference room booking</h2>
+      <ul>
+        <li><h3>Started as a problem that needed solving</h3></li>
+        <li>
+          <h3>Our idea: see the big board!</h3>
+          <img src="bigboard.jpg" alt="He'll see the big board!" />
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What could possibly go wrong?</h1>
+
+      <h2>Challenges are in the <span class="hilite">UX</span> more than the tech stack</h2>
+      <ul>
+        <li>
+          <h3>
+            Except for Google Apps API.
+          </h3>
+        </li>
+
+        <li>
+          <h3>
+            The real difficulty: getting enough people to use it such that it's
+            useful
+          </h3>
+        </li>
+
+        <li>
+          <h3>
+            One more problem: how is it <em class="hilite">not</em> Roominant?
+          </h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What's different?</h1>
+
+      <h2>Bookie is designed for <span class="hilite">impromptu</span> meetings</h2>
+
+      <ul>
+        <li>
+          <h3>
+            The interface is meant to reflect this
+          </h3>
+            <ul>
+              <li>See what's available now</li>
+              <li>Book starting now, for a (little) while</li>
+            </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What's next?</h1>
+
+      <h2>Improve the client</h2>
+
+      <ul>
+        <li><h3>Sign in as real Google users</h3> (to book a meeting as yourself)</li>
+        <li>
+          <h3>More real-time room display</h3>
+          <ul>
+            <li>Currently we're limited by (short-)polling</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What's next?</h1>
+
+      <h2>Improve the API</h2>
+
+      <ul>
+        <li><h3>By rewriting in Haskell, of course 🚎</h3></li>
+        <li>
+          <h3>"Real-time" room updates?</h3>
+          <ul>
+            <li>Cool edge Rails features:
+              <a href="http://edgeapi.rubyonrails.org/classes/ActionController/Live.html">
+                ActionController::Live
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Mine more data from <strike>lab rats</strike> valued coworkers</h3>
+          <ul>
+            <li>With beacons!</li>
+            <li>With Github!</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h1>What's next?</h1>
+
+      <h2>Improve the API</h2>
+
+      <ul>
+        <li>
+          <h3>Gamify everything</h3>
+          <ul>
+            <li>Don't you deserve an achievement for visiting Zoidberg?</li>
+          </ul>
+        </li>
+      </ul>
+      <img src="useful.gif"/><img src="attention.gif"/>
+    </section>
+
+    <section class="slide">
+      <h1>What'd I miss?</h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
